@@ -17,7 +17,7 @@ describe('fetchBreedDescription', () => {
   });
 
   it('returns a error for invalid breed, via callback', (done) => {
-    fetchBreedDescription('Siberian', (err, desc) => {
+    fetchBreedDescription('yorkie', (err, desc) => {
         // we expected no description for this scenario
         assert.equal(desc, null);
 
