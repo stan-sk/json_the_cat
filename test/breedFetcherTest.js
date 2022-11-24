@@ -18,12 +18,12 @@ describe('fetchBreedDescription', () => {
 
   it('returns a error for invalid breed, via callback', (done) => {
     fetchBreedDescription('Siberian', (err, desc) => {
-        // we expect no error for this scenario
+        // we expected no description for this scenario
         assert.equal(desc, null);
 
         const expectedErr = "Breed not found or no description available.";
 
-        // compare returned description
+        // compare returned error
         assert.equal(expectedErr, err.trim());
 
         done();
